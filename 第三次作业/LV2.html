@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+</body>
+</html>
+
+<script>
+let arr = [1,[2,3],[4,5,[6,7,8]],9];	 
+alert(flatten(arr));
+
+	
+function flatten(arr){
+
+       var res = [] //储存结果
+
+     
+	   
+	   //如果arr的某项为数组，则添加展开后的到res。否则直接push。
+	   arr.map(item =>{ 
+
+        if (Array.isArray(item)==1) {
+
+         res = res.concat(flatten(item))
+
+        } else {
+
+          res.push(item)
+
+        }
+
+       })
+
+       return res;
+
+     }
+
+  
+</script>
+
