@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+</body>
+</html>
+
+<script>
+Array.prototype._push = function(...args) {
+    if(!args) return 0;
+    let start = this.length;
+    let length = this.length + args.length;
+    for(let i = this.length; i < length; i++) {
+        this[i] = args[i - start];
+    }
+    return length;
+}
+
+let arr = [1];
+alert(arr._push(2))
+</script>
+
