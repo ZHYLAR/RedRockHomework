@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+
+</head>
+<body>
+    <div>
+        <H1>《记承天寺夜游》</H1>
+        <div class="content" id="contents">
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function start(){
+        let str = '元丰六年十月十二日夜，解衣欲睡，月色入户，欣然起行。念无与为乐者，遂至承天寺寻张怀民。怀民亦未寝，相与步于中庭。庭下如积水空明，水中藻、荇交横，盖竹柏影也。何夜无月？何处无竹柏？但少闲人如吾两人者耳。'
+        let str_ = ''
+        let i = 0
+        let content = document.getElementById('contents')
+        let timer = setInterval(()=>{
+            if(str_.length<str.length){
+                str_ += str[i++]
+                content.innerHTML = '<p>'+str_+'_</p>' 
+            }else{ 
+                clearInterval(timer)
+                content.innerHTML = '<p>'+str_+'</p>'
+            }
+        },100)
+    }
+    start()
+</script>
