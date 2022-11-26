@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .div1{
+        width: 80px;
+        height: 80px;
+        background-color: #68baf4;
+        border-radius: 50%;
+        position:absolute;
+        top:20px;
+   
+    }
+    .div2{
+        width: 80px;
+        height: 80px;
+        background-color: rgb(224, 144, 74);
+        border-radius: 50%;
+       position:absolute;
+        top:100px;
+    }
+    .div3{
+        width: 80px;
+        height: 80px;
+        background-color: gray;
+        border-radius: 50%;
+     	position:absolute;
+        top:180px;
+    }
+
+</style>
+<body>
+    <div class="div1" id="d1"></div>
+	<div class="div2" id="d2"></div>
+    <div class="div3" id="d3"></div>
+</body>
+</html>
+<script>
+    function timer(){
+    setTimeout(() => {
+        //console.log(1);
+        var ele1 = document.getElementById("d1");
+        ele1.style.left = "200px"
+        setTimeout(()=>{
+            //console.log(2);
+            var ele2 = document.getElementById("d2");
+        	ele2.style.left = "200px"
+			setTimeout(()=>{
+                //console.log(3);
+				 var ele3 = document.getElementById("d3");
+        	ele3.style.left = "200px"
+            },1000)
+        },1000)
+    }, 1000);
+}
+timer()
+</script>
